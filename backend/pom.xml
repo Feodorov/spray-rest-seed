@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>spray-rest-seed</artifactId>
+        <groupId>com.github.feodorov</groupId>
+        <version>1.0-SNAPSHOT</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+
+    <artifactId>backend</artifactId>
+
+    <dependencies>
+        <dependency>
+            <groupId>com.github.feodorov</groupId>
+            <artifactId>api</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+        <dependency>
+            <groupId>com.typesafe.akka</groupId>
+            <artifactId>akka-actor_${base-scala.version}</artifactId>
+            <version>${akka.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.typesafe.akka</groupId>
+            <artifactId>akka-slf4j_${base-scala.version}</artifactId>
+            <version>${akka.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>ch.qos.logback</groupId>
+            <artifactId>logback-classic</artifactId>
+            <version>${logback-classic.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>io.spray</groupId>
+            <artifactId>spray-can</artifactId>
+            <version>${spray.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>io.spray</groupId>
+            <artifactId>spray-routing</artifactId>
+            <version>${spray.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>io.spray</groupId>
+            <artifactId>spray-json_${base-scala.version}</artifactId>
+            <version>${spray.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>io.spray</groupId>
+            <artifactId>spray-testkit</artifactId>
+            <version>${spray.version}</version>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <sourceDirectory>src/main/scala</sourceDirectory>
+        <resources>
+            <resource>
+                <directory>src/main/resources</directory>
+            </resource>
+        </resources>
+        <testSourceDirectory>src/test/scala</testSourceDirectory>
+    </build>
+</project>
